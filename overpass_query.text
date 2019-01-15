@@ -1,0 +1,13 @@
+// https://overpass-turbo.eu/
+// This is the query that generates the big_brother.geojson
+
+[out:json][timeout:9990];
+(
+  // query part for: “surveillance=*”
+  node["surveillance"];
+  way["surveillance"];
+  relation["surveillance"];
+);
+out body;
+>;
+out skel qt;
